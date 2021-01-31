@@ -23,7 +23,8 @@ class CNT:
         cos_theta= sqrt(3)*(m+n)/2/sqrt(m**2+n**2+m*n)
         self.dia=d
         self.chirality=acos(cos_theta)*180/pi
-        
+    def __repr__(self):
+        return "CNT(m={0},n={1},a={2})".format(self.m,self.n,a)
     def metal_matrix_dim(self,alat,matlen):
          """determin the lengh of the CNT according to the metal matrix, c-c single bond 1.54 A, double bond 1.34 A, and triple bond 1.20 but in CNT it is 1.42 A""" 
          self.alat=alat
